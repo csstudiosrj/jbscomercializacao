@@ -6,6 +6,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-brand-red: hsl(var(--brand-red));
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
   --color-border: hsl(var(--border));
@@ -58,6 +59,9 @@
   --opaque-button-border-intensity: 9;
   --elevate-1: rgba(255,255,255, .04);
   --elevate-2: rgba(255,255,255, .09);
+
+  /* Brand Red */
+  --brand-red: 0 79% 40%;
 
   /* Deep Navy Theme by default to match the vibe */
   --background: 222 47% 8%;

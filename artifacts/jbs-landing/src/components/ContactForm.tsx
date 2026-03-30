@@ -46,7 +46,8 @@ export function ContactForm() {
 
   return (
     <div className="bg-card/50 border border-border p-8 rounded-lg backdrop-blur-sm shadow-2xl">
-      <h3 className="text-2xl font-bold text-white mb-6 font-heading">Fale Conosco</h3>
+      <h3 className="text-2xl font-bold text-white mb-2 font-heading">Fale Conosco</h3>
+      <div className="w-12 h-1 bg-brand-red rounded-full mb-6" />
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormField
@@ -107,7 +108,7 @@ export function ContactForm() {
               </FormItem>
             )}
           />
-          <Button type="submit" className="w-full h-12 text-lg font-semibold bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] transition-all duration-300">
+          <Button type="submit" className="w-full h-12 text-lg font-semibold bg-brand-red hover:bg-brand-red/85 text-white shadow-[0_0_20px_rgba(185,28,28,0.25)] hover:shadow-[0_0_30px_rgba(185,28,28,0.45)] transition-all duration-300">
             Enviar Mensagem
           </Button>
         </form>
