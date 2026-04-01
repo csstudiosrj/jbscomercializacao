@@ -20,6 +20,7 @@
                     colors: {
                         brandDark: '#111111',
                         brandRed: '#E63946',
+                        brandGold: '#FFB800', /* Dourado/Amarelo da Marca */
                         brandGray: '#1F2937'
                     },
                     fontFamily: {
@@ -33,20 +34,20 @@
     <style>
         html { scroll-behavior: smooth; }
         
-        /* Efeito Glassmorphism no Menu */
+        /* Efeito Glassmorphism no Menu com borda Dourada */
         .glass { 
             background: rgba(17, 17, 17, 0.95); 
             backdrop-filter: blur(10px); 
-            border-bottom: 2px solid #E63946;
+            border-bottom: 2px solid #FFB800;
         }
 
-        /* Hero com Gradiente Escuro para Leitura Perfeita */
+        /* Hero com Gradiente Escuro */
         .hero-premium {
             position: relative;
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(to right, rgba(17, 17, 17, 0.95) 20%, rgba(17, 17, 17, 0.5) 100%), 
+            background: linear-gradient(to right, rgba(17, 17, 17, 0.95) 20%, rgba(17, 17, 17, 0.6) 100%), 
                         url('https://images.unsplash.com/photo-1560958089-b8a1929cea89?q=80&w=2071&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
@@ -67,7 +68,7 @@
         .insta-card:hover .insta-overlay { opacity: 1; }
         
         .text-shadow {
-            text-shadow: 2px 4px 15px rgba(0,0,0,0.6);
+            text-shadow: 2px 4px 15px rgba(0,0,0,0.8);
         }
     </style>
 </head>
@@ -77,19 +78,19 @@
     <nav class="fixed w-full z-[100] glass py-4">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <div class="flex items-center gap-2">
-                <div class="bg-brandRed p-1 rounded shadow-lg">
+                <div class="bg-brandRed p-1 rounded shadow-lg border border-brandGold/30">
                     <span class="text-white font-black text-xl italic px-1">JBS</span>
                 </div>
                 <span class="font-black text-2xl tracking-tighter text-white uppercase">Comercialização</span>
             </div>
             <div class="hidden md:flex gap-8 font-bold text-[10px] uppercase tracking-[0.2em] text-white/80">
-                <a href="#inicio" class="hover:text-brandRed transition">Início</a>
-                <a href="#servicos" class="hover:text-brandRed transition">Serviços</a>
-                <a href="#instagram" class="hover:text-brandRed transition">Social</a>
-                <a href="#contato" class="hover:text-brandRed transition">Contato</a>
+                <a href="#inicio" class="hover:text-brandGold transition">Início</a>
+                <a href="#servicos" class="hover:text-brandGold transition">Serviços</a>
+                <a href="#instagram" class="hover:text-brandGold transition">Social</a>
+                <a href="#contato" class="hover:text-brandGold transition">Contato</a>
             </div>
-            <a href="https://wa.me/5521980921622" target="_blank" class="bg-brandRed text-white px-6 py-2 rounded-full font-black hover:bg-red-700 transition shadow-xl flex items-center gap-2 text-xs">
-                <i class="fab fa-whatsapp text-lg"></i> ATENDIMENTO
+            <a href="https://wa.me/5521980921622" target="_blank" class="bg-brandGold text-brandDark px-6 py-2 rounded-full font-black hover:bg-white transition shadow-xl flex items-center gap-2 text-xs uppercase">
+                <i class="fab fa-whatsapp text-lg"></i> Atendimento
             </a>
         </div>
     </nav>
@@ -99,23 +100,23 @@
         <div class="container mx-auto px-6 relative z-10">
             <div class="max-w-4xl" data-aos="fade-right" data-aos-duration="1200">
                 <div class="flex items-center gap-3 mb-6">
-                    <div class="h-[2px] w-16 bg-brandRed"></div>
-                    <span class="text-brandRed font-bold tracking-[0.4em] uppercase text-xs">Rio de Janeiro | Bonsucesso</span>
+                    <div class="h-[2px] w-16 bg-brandGold"></div>
+                    <span class="text-brandGold font-bold tracking-[0.4em] uppercase text-xs">Rio de Janeiro | Bonsucesso</span>
                 </div>
-                <h1 class="text-5xl md:text-8xl font-black text-white leading- mb-8 uppercase italic text-shadow pt-4">
+                <h1 class="text-5xl md:text-8xl font-black text-white leading-tight mb-8 uppercase italic text-shadow pt-4">
                     Seu Próximo <br> <span class="text-brandRed">Veículo</span> Está Aqui
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed max-w-2xl font-light">
                     Especialistas em compra, venda e financiamento de automóveis e motocicletas. Soluções financeiras e administrativas com a confiança que você merece.
                 </p>
                 <div class="flex flex-wrap gap-6 items-center">
-                    <a href="#contato" class="bg-brandRed text-white px-12 py-6 rounded-sm font-black text-xl hover:bg-red-700 transition-all duration-300 uppercase italic shadow-[0_20px_50px_rgba(230,57,70,0.3)] hover:-translate-y-1">
+                    <a href="#contato" class="bg-brandRed text-white px-12 py-6 rounded-sm font-black text-xl hover:bg-brandGold hover:text-brandDark transition-all duration-300 uppercase italic shadow-[0_20px_50px_rgba(230,57,70,0.3)] hover:-translate-y-1">
                         Falar com Consultor
                     </a>
-                    <div class="flex items-center gap-4 px-8 py-2 border-l-2 border-brandRed/50 text-white">
+                    <div class="flex items-center gap-4 px-8 py-2 border-l-2 border-brandGold/50 text-white">
                         <div class="flex flex-col">
-                            <span class="text-4xl font-black text-brandRed leading-none">5.0</span>
-                            <div class="flex text-brandRed text-[10px] mt-1">
+                            <span class="text-4xl font-black text-brandGold leading-none">5.0</span>
+                            <div class="flex text-brandGold text-[10px] mt-1">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
                         </div>
@@ -127,26 +128,26 @@
     </section>
 
     <!-- Stats Bar -->
-    <section class="py-16 bg-white relative z-30 -mt-16 mx-6 rounded-xl md:mx-auto md:max-w-6xl shadow-[0_20px_60px_rgba(0,0,0,0.1)]">
+    <section class="py-16 bg-white relative z-30 -mt-16 mx-6 rounded-xl md:mx-auto md:max-w-6xl shadow-[0_20px_60px_rgba(0,0,0,0.1)] border-b-4 border-brandGold">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
                 <div data-aos="fade-up" data-aos-delay="100">
-                    <i class="fas fa-car text-brandDark text-2xl mb-3"></i>
+                    <i class="fas fa-car text-brandRed text-3xl mb-3"></i>
                     <div class="text-3xl font-black text-brandDark mb-1 italic leading-none">Seminovos</div>
                     <div class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Revisados e com Garantia</div>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-motorcycle text-brandDark text-2xl mb-3"></i>
+                    <i class="fas fa-motorcycle text-brandRed text-3xl mb-3"></i>
                     <div class="text-3xl font-black text-brandDark mb-1 italic leading-none">Motos</div>
                     <div class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Compra e Venda</div>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="300">
-                    <i class="fas fa-file-invoice-dollar text-brandDark text-2xl mb-3"></i>
+                    <i class="fas fa-file-invoice-dollar text-brandRed text-3xl mb-3"></i>
                     <div class="text-3xl font-black text-brandDark mb-1 italic leading-none">Crédito</div>
                     <div class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Aprovação Facilitada</div>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="400">
-                    <i class="fas fa-handshake text-brandDark text-2xl mb-3"></i>
+                    <i class="fas fa-handshake text-brandRed text-3xl mb-3"></i>
                     <div class="text-3xl font-black text-brandDark mb-1 italic leading-none">Confiança</div>
                     <div class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Transparência Total</div>
                 </div>
@@ -159,7 +160,7 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-24" data-aos="fade-up">
                 <h2 class="text-brandDark text-5xl md:text-7xl font-black uppercase italic leading-none mb-4">Nossas <span class="text-slate-300">Soluções</span></h2>
-                <div class="h-2 w-24 bg-brandRed mx-auto"></div>
+                <div class="h-2 w-24 bg-brandGold mx-auto"></div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -171,11 +172,11 @@
                     <h3 class="text-2xl font-black text-brandDark mb-4 uppercase italic">Automóveis</h3>
                     <p class="text-slate-500 leading-relaxed">Comércio a varejo de automóveis, camionetas e utilitários usados. Veículos de procedência com laudo cautelar.</p>
                 </div>
-                <div class="group relative bg-white p-12 shadow-xl hover:shadow-2xl transition-all duration-500 rounded-2xl overflow-hidden border-b-8 border-brandDark" data-aos="fade-up" data-aos-delay="200">
+                <div class="group relative bg-white p-12 shadow-xl hover:shadow-2xl transition-all duration-500 rounded-2xl overflow-hidden border-b-8 border-brandGold" data-aos="fade-up" data-aos-delay="200">
                     <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
                         <i class="fas fa-motorcycle text-9xl"></i>
                     </div>
-                    <i class="fas fa-motorcycle text-5xl text-brandDark mb-8 group-hover:text-brandRed transition-colors"></i>
+                    <i class="fas fa-motorcycle text-5xl text-brandDark mb-8 group-hover:text-brandGold transition-colors"></i>
                     <h3 class="text-2xl font-black text-brandDark mb-4 uppercase italic">Motocicletas</h3>
                     <p class="text-slate-500 leading-relaxed">Comércio a varejo de motocicletas e motonetas usadas. As melhores marcas com condições imperdíveis.</p>
                 </div>
@@ -192,39 +193,39 @@
     </section>
 
     <!-- Instagram Section -->
-    <section id="instagram" class="py-24 bg-brandDark overflow-hidden">
+    <section id="instagram" class="py-24 bg-brandDark overflow-hidden border-t-4 border-brandGold">
         <div class="container mx-auto px-6 text-center">
             <div class="mb-16" data-aos="zoom-in">
                 <h2 class="text-white text-4xl font-black uppercase italic mb-2 tracking-tighter">Siga @jbs_comercializacao</h2>
-                <p class="text-brandRed font-bold tracking-[0.4em] uppercase text-[10px]">Acompanhe nosso estoque e novidades</p>
+                <p class="text-brandGold font-bold tracking-[0.4em] uppercase text-[10px]">Acompanhe nosso estoque e novidades</p>
             </div>
             
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-                <a href="https://www.instagram.com/jbs_comercializacao/" target="_blank" class="insta-card relative aspect-square overflow-hidden rounded-2xl shadow-2xl border-4 border-white/10" data-aos="flip-left" data-aos-delay="100">
+                <a href="https://www.instagram.com/jbs_comercializacao/" target="_blank" class="insta-card relative aspect-square overflow-hidden rounded-2xl shadow-2xl border-2 border-white/10" data-aos="flip-left" data-aos-delay="100">
                     <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?w=600&h=600&fit=crop" class="w-full h-full object-cover transition duration-700 hover:scale-110">
                     <div class="insta-overlay absolute inset-0 bg-brandRed/90 flex flex-col items-center justify-center opacity-0 transition duration-300 text-white">
-                        <i class="fab fa-instagram text-5xl mb-2"></i>
+                        <i class="fab fa-instagram text-5xl mb-2 text-brandGold"></i>
                         <span class="font-black text-[10px] uppercase tracking-widest">Ver Post</span>
                     </div>
                 </a>
-                <a href="https://www.instagram.com/jbs_comercializacao/" target="_blank" class="insta-card relative aspect-square overflow-hidden rounded-2xl shadow-2xl border-4 border-white/10" data-aos="flip-left" data-aos-delay="200">
+                <a href="https://www.instagram.com/jbs_comercializacao/" target="_blank" class="insta-card relative aspect-square overflow-hidden rounded-2xl shadow-2xl border-2 border-white/10" data-aos="flip-left" data-aos-delay="200">
                     <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=600&h=600&fit=crop" class="w-full h-full object-cover transition duration-700 hover:scale-110">
                     <div class="insta-overlay absolute inset-0 bg-brandRed/90 flex flex-col items-center justify-center opacity-0 transition duration-300 text-white">
-                        <i class="fab fa-instagram text-5xl mb-2"></i>
+                        <i class="fab fa-instagram text-5xl mb-2 text-brandGold"></i>
                         <span class="font-black text-[10px] uppercase tracking-widest">Ver Post</span>
                     </div>
                 </a>
-                <a href="https://www.instagram.com/jbs_comercializacao/" target="_blank" class="insta-card relative aspect-square overflow-hidden rounded-2xl shadow-2xl border-4 border-white/10" data-aos="flip-left" data-aos-delay="300">
+                <a href="https://www.instagram.com/jbs_comercializacao/" target="_blank" class="insta-card relative aspect-square overflow-hidden rounded-2xl shadow-2xl border-2 border-white/10" data-aos="flip-left" data-aos-delay="300">
                     <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=600&h=600&fit=crop" class="w-full h-full object-cover transition duration-700 hover:scale-110">
                     <div class="insta-overlay absolute inset-0 bg-brandRed/90 flex flex-col items-center justify-center opacity-0 transition duration-300 text-white">
-                        <i class="fab fa-instagram text-5xl mb-2"></i>
+                        <i class="fab fa-instagram text-5xl mb-2 text-brandGold"></i>
                         <span class="font-black text-[10px] uppercase tracking-widest">Ver Post</span>
                     </div>
                 </a>
-                <a href="https://www.instagram.com/jbs_comercializacao/" target="_blank" class="insta-card relative aspect-square overflow-hidden rounded-2xl shadow-2xl border-4 border-white/10" data-aos="flip-left" data-aos-delay="400">
+                <a href="https://www.instagram.com/jbs_comercializacao/" target="_blank" class="insta-card relative aspect-square overflow-hidden rounded-2xl shadow-2xl border-2 border-white/10" data-aos="flip-left" data-aos-delay="400">
                     <img src="https://images.unsplash.com/photo-1573273787173-0eb81a833b34?w=600&h=600&fit=crop" class="w-full h-full object-cover transition duration-700 hover:scale-110">
                     <div class="insta-overlay absolute inset-0 bg-brandRed/90 flex flex-col items-center justify-center opacity-0 transition duration-300 text-white">
-                        <i class="fab fa-instagram text-5xl mb-2"></i>
+                        <i class="fab fa-instagram text-5xl mb-2 text-brandGold"></i>
                         <span class="font-black text-[10px] uppercase tracking-widest">Ver Post</span>
                     </div>
                 </a>
@@ -239,7 +240,7 @@
                 <h2 class="text-brandDark text-5xl font-black uppercase italic mb-8 tracking-tighter leading-none">Visite nossa <br> <span class="text-brandRed">Loja Física</span></h2>
                 <div class="space-y-8 mb-12">
                     <div class="flex items-start gap-6">
-                        <div class="bg-brandDark p-4 rounded-lg shadow-lg">
+                        <div class="bg-brandDark p-4 rounded-lg shadow-lg border-b-2 border-brandGold">
                             <i class="fas fa-location-dot text-brandRed text-2xl"></i>
                         </div>
                         <div>
@@ -248,7 +249,7 @@
                         </div>
                     </div>
                     <div class="flex items-start gap-6">
-                        <div class="bg-brandDark p-4 rounded-lg shadow-lg">
+                        <div class="bg-brandDark p-4 rounded-lg shadow-lg border-b-2 border-brandGold">
                             <i class="fas fa-clock text-brandRed text-2xl"></i>
                         </div>
                         <div>
@@ -257,7 +258,7 @@
                         </div>
                     </div>
                     <div class="flex items-start gap-6">
-                        <div class="bg-brandDark p-4 rounded-lg shadow-lg">
+                        <div class="bg-brandDark p-4 rounded-lg shadow-lg border-b-2 border-brandGold">
                             <i class="fas fa-phone text-brandRed text-2xl"></i>
                         </div>
                         <div>
@@ -271,50 +272,4 @@
                 </div>
             </div>
 
-            <div class="bg-brandDark p-12 md:p-20 rounded-[3rem] text-white shadow-[0_50px_100px_rgba(17,17,17,0.3)] relative overflow-hidden" data-aos="fade-left">
-                <h3 class="text-4xl font-black uppercase italic mb-4 tracking-tighter">Fale <span class="text-brandRed">Conosco</span></h3>
-                <p class="text-gray-400 mb-10 font-medium">Preencha os dados abaixo e nossa equipe entrará em contato rapidamente.</p>
-                <form action="https://formspree.io/f/mvzvrvzp" method="POST" class="space-y-8">
-                    <div class="group">
-                        <label class="text-[10px] uppercase font-black tracking-[0.3em] text-gray-500 group-focus-within:text-brandRed transition-colors">Nome Completo</label>
-                        <input type="text" name="name" required class="w-full bg-transparent border-b-2 border-white/20 py-4 focus:border-brandRed outline-none transition-all text-xl font-bold">
-                    </div>
-                    <div class="group">
-                        <label class="text-[10px] uppercase font-black tracking-[0.3em] text-gray-500 group-focus-within:text-brandRed transition-colors">WhatsApp</label>
-                        <input type="text" name="whatsapp" required class="w-full bg-transparent border-b-2 border-white/20 py-4 focus:border-brandRed outline-none transition-all text-xl font-bold">
-                    </div>
-                    <div class="group">
-                        <label class="text-[10px] uppercase font-black tracking-[0.3em] text-gray-500 group-focus-within:text-brandRed transition-colors">Como podemos ajudar?</label>
-                        <textarea name="message" rows="3" required class="w-full bg-transparent border-b-2 border-white/20 py-4 focus:border-brandRed outline-none transition-all text-xl font-bold"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-brandRed text-white font-black py-6 rounded-xl text-xl hover:bg-red-700 transition-all duration-500 uppercase italic tracking-[0.2em] shadow-2xl">
-                        Enviar Mensagem
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-16 bg-brandDark border-t border-white/5">
-        <div class="container mx-auto px-6 text-center">
-            <div class="text-white font-black text-2xl italic mb-8 uppercase tracking-tighter">JBS <span class="text-brandRed">Comercialização</span></div>
-            <p class="text-slate-500 text-[10px] uppercase font-black tracking-[0.5em]">
-                Desenvolvido por 
-                <a href="https://csstudios.vercel.app/" target="_blank" class="text-brandRed hover:underline">CS studios</a>
-            </p>
-        </div>
-    </footer>
-
-    <!-- AOS Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100,
-            easing: 'ease-in-out-quart'
-        });
-    </script>
-</body>
-</html>
+            <div class="bg-brandDark p-12 md:p-20 rounded-[3rem] text-white shadow-[0_50px_100px_rgba(17,17,17,0.3)] relative overfl
