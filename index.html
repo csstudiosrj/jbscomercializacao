@@ -17,15 +17,17 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        brandDark: '#111111',
-                        brandRed: '#D00000',
-                        brandGold: '#D4AF37',
-                        redHover: '#A00000'
-                    },
                     fontFamily: {
-                        sans:['Montserrat', 'sans-serif'],
+                        sans:['Outfit', 'sans-serif'],
                         display:['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: '#050505',
+                        darker: '#000000',
+                        card: '#0f0f0f',
+                        truered: '#D00000', /* Vermelho Puro/Ferrari */
+                        redHover: '#A00000',
+                        gold: '#D4AF37' /* Dourado Premium */
                     }
                 }
             }
@@ -133,33 +135,34 @@
         </div>
     </section>
 
-    <!-- Features / Trust Bar - ÍCONES CORRIGIDOS PARA DOURADO -->
+    <!-- Features / Trust Bar -->
     <section class="py-16 bg-darker border-y border-white/5 relative z-20">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-12 h-12 rounded-full border border-brandGold/30 flex items-center justify-center mx-auto mb-4 text-brandGold">
-                        <i class="fas fa-shield-check text-xl"></i>
+                    <div class="w-12 h-12 rounded-full border border-truered/30 flex items-center justify-center mx-auto mb-4 text-truered">
+                        <!-- CORREÇÃO 1: Ícone alterado para versão gratuita (fa-shield-halved) -->
+                        <i class="fas fa-shield-halved text-xl"></i>
                     </div>
                     <h3 class="text-white font-bold mb-1">Garantia de Procedência</h3>
                     <p class="text-slate-500 text-xs">Veículos inspecionados</p>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-12 h-12 rounded-full border border-brandGold/30 flex items-center justify-center mx-auto mb-4 text-brandGold">
+                    <div class="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center mx-auto mb-4 text-gold">
                         <i class="fas fa-award text-xl"></i>
                     </div>
                     <h3 class="text-white font-bold mb-1">Qualidade Premium</h3>
                     <p class="text-slate-500 text-xs">Padrão showroom</p>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-12 h-12 rounded-full border border-brandGold/30 flex items-center justify-center mx-auto mb-4 text-brandGold">
+                    <div class="w-12 h-12 rounded-full border border-truered/30 flex items-center justify-center mx-auto mb-4 text-truered">
                         <i class="fas fa-star text-xl"></i>
                     </div>
                     <h3 class="text-white font-bold mb-1">Avaliação 5 Estrelas</h3>
                     <p class="text-slate-500 text-xs">Satisfação máxima</p>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="400">
-                    <div class="w-12 h-12 rounded-full border border-brandGold/30 flex items-center justify-center mx-auto mb-4 text-brandGold">
+                    <div class="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center mx-auto mb-4 text-gold">
                         <i class="fas fa-clock text-xl"></i>
                     </div>
                     <h3 class="text-white font-bold mb-1">Atendimento Ágil</h3>
@@ -169,7 +172,7 @@
         </div>
     </section>
 
-    <!-- Nossa Coleção (Showroom) - IMAGENS CORRIGIDAS -->
+    <!-- Nossa Coleção (Showroom) -->
     <section id="showroom" class="py-24 bg-dark">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16" data-aos="fade-up">
@@ -180,8 +183,9 @@
 
             <div class="grid md:grid-cols-2 gap-6">
                 <!-- Card 1 -->
-                <div class="collection-card relative h-[400px] w-full rounded-xl overflow-hidden group cursor-pointer" data-aos="fade-right">
-                    <img src="https://images.unsplash.com/photo-1503376760367-11ea8eb22247?q=80&w=2070&auto=format&fit=crop" alt="SUV Premium" class="collection-img absolute inset-0 w-full h-full object-cover">
+                <div class="collection-card relative h-[400px] rounded-xl overflow-hidden group cursor-pointer" data-aos="fade-right">
+                    <!-- CORREÇÃO 2: Link da imagem substituído por um link ativo e confiável -->
+                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=2070&auto=format&fit=crop" alt="SUV Premium" class="collection-img absolute inset-0 w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/50 to-transparent opacity-90"></div>
                     <div class="absolute bottom-0 left-0 p-8">
                         <span class="text-truered text-xs font-bold tracking-[0.2em] uppercase mb-2 block">Sofisticação</span>
@@ -189,11 +193,11 @@
                     </div>
                 </div>
                 <!-- Card 2 -->
-                <div class="collection-card relative h-[400px] w-full rounded-xl overflow-hidden group cursor-pointer" data-aos="fade-left">
+                <div class="collection-card relative h-[400px] rounded-xl overflow-hidden group cursor-pointer" data-aos="fade-left">
                     <img src="https://images.unsplash.com/photo-1609521263047-f8f205293f24?q=80&w=2070&auto=format&fit=crop" alt="Interior Luxo" class="collection-img absolute inset-0 w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/50 to-transparent opacity-90"></div>
                     <div class="absolute bottom-0 left-0 p-8">
-                        <span class="text-brandGold text-xs font-bold tracking-[0.2em] uppercase mb-2 block">Interior Premium</span>
+                        <span class="text-gold text-xs font-bold tracking-[0.2em] uppercase mb-2 block">Interior Premium</span>
                         <h3 class="text-3xl font-display font-bold text-white">O Detalhe Faz a Diferença</h3>
                     </div>
                 </div>
@@ -209,7 +213,7 @@
                 Na JBS Comercialização, entendemos que comprar um carro é mais do que uma transação comercial — é a realização de um sonho. Nossa missão é proporcionar uma experiência automotiva inigualável, pautada na transparência, excelência e dedicação absoluta a cada cliente que cruza nossas portas.
             </p>
             <div class="inline-flex items-center gap-4 border border-white/10 rounded-full px-6 py-3 bg-darker">
-                <div class="flex text-brandGold text-sm">
+                <div class="flex text-gold text-sm">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
                 <span class="text-white font-bold text-sm">Classificação Máxima de Clientes</span>
@@ -315,97 +319,3 @@
                             <div class="w-12 h-12 rounded-full bg-card border border-white/5 flex items-center justify-center shrink-0">
                                 <i class="fab fa-instagram text-truered"></i>
                             </div>
-                            <div>
-                                <h4 class="text-white font-bold text-lg mb-1">Instagram</h4>
-                                <a href="https://www.instagram.com/jbs_comercializacao/" target="_blank" class="text-slate-400 text-sm hover:text-white transition">@jbs_comercializacao</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Formulário Direita -->
-                <div data-aos="fade-left">
-                    <div class="bg-card p-10 rounded-2xl border border-white/5 shadow-2xl">
-                        <h3 class="text-2xl font-display font-bold text-white mb-8">Fale Conosco</h3>
-                        <form action="https://formspree.io/f/mvzvrvzp" method="POST" class="space-y-6">
-                            <div>
-                                <label class="text-[10px] uppercase font-bold tracking-widest text-slate-500 block mb-2">Nome</label>
-                                <input type="text" name="name" placeholder="Seu nome completo" required class="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:border-truered outline-none transition-colors text-sm">
-                            </div>
-                            <div class="grid grid-cols-2 gap-4">
-                                <div>
-                                    <label class="text-[10px] uppercase font-bold tracking-widest text-slate-500 block mb-2">E-mail</label>
-                                    <input type="email" name="email" placeholder="seu@email.com" required class="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:border-truered outline-none transition-colors text-sm">
-                                </div>
-                                <div>
-                                    <label class="text-[10px] uppercase font-bold tracking-widest text-slate-500 block mb-2">Telefone</label>
-                                    <input type="text" name="phone" placeholder="(21) 90000-0000" required class="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:border-truered outline-none transition-colors text-sm">
-                                </div>
-                            </div>
-                            <div>
-                                <label class="text-[10px] uppercase font-bold tracking-widest text-slate-500 block mb-2">Mensagem</label>
-                                <textarea name="message" rows="4" placeholder="Como podemos ajudar?" required class="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:border-truered outline-none transition-colors text-sm resize-none"></textarea>
-                            </div>
-                            <button type="submit" class="w-full bg-truered text-white font-bold py-4 rounded-lg hover:bg-redHover transition-colors uppercase tracking-widest text-sm mt-4">
-                                Enviar Mensagem
-                            </button>
-                        </form>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Mapa -->
-            <div class="mt-16 h-[400px] rounded-2xl overflow-hidden border border-white/5 grayscale hover:grayscale-0 transition-all duration-700" data-aos="fade-up">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.0123456!2d-43.255866!3d-22.864448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zRMOpY2ltbyB0ZXJjZWlybyBwYXJhbGVsbyBzdWw!5e0!3m2!1spt-BR!2sbr!4v1710000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-darker border-t border-white/5 py-12">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex items-center gap-2">
-                <span class="font-display font-bold text-2xl text-white tracking-tighter">JBS</span>
-                <span class="font-bold text-xs tracking-widest text-truered uppercase mt-1">Comercialização</span>
-            </div>
-            
-            <div class="flex gap-6 text-slate-500">
-                <a href="https://www.instagram.com/jbs_comercializacao/" target="_blank" class="hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
-                <a href="https://wa.me/5521980921622" target="_blank" class="hover:text-white transition"><i class="fab fa-whatsapp text-xl"></i></a>
-            </div>
-        </div>
-        <div class="container mx-auto px-6 mt-8 text-center md:text-left border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-slate-600 text-xs tracking-widest uppercase">&copy; 2024 JBS Comercialização. Todos os direitos reservados.</p>
-            <p class="text-slate-600 text-[10px] uppercase font-bold tracking-[0.3em]">
-                Desenvolvido por 
-                <a href="https://csstudios.vercel.app/" target="_blank" class="text-slate-400 hover:text-white transition hover:underline">CS studios</a>
-            </p>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 50,
-        });
-
-        // Efeito Navbar
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if(window.scrollY > 50) {
-                nav.classList.add('shadow-2xl');
-                nav.classList.remove('py-4');
-                nav.classList.add('py-3');
-            } else {
-                nav.classList.remove('shadow-2xl');
-                nav.classList.remove('py-3');
-                nav.classList.add('py-4');
-            }
-        });
-    </script>
-</body>
-</html>
